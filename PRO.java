@@ -68,6 +68,7 @@ public class PRO extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblGuardar = new javax.swing.JTable();
@@ -88,6 +89,9 @@ public class PRO extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,17 +100,17 @@ public class PRO extends javax.swing.JFrame {
 
         tblGuardar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "TipoPiezas", "Piezas", "Largo", "Ancho", "Entrada", "Salida"
+                "id", "TipoPiezas", "Pieza", "Largo", "Ancho", "Entrada", "Salida"
             }
         ));
         tblGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -128,7 +132,7 @@ public class PRO extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 380, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 390, -1, 40));
 
         jButton2.setText("MOSTRAR DATOS");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +140,7 @@ public class PRO extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, -1, 40));
 
         jButton3.setText("REGISTRAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +148,7 @@ public class PRO extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 290, -1, 40));
 
         jButton4.setText("ACTUALIZAR");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -152,7 +156,7 @@ public class PRO extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, -1, -1));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 290, -1, 40));
 
         jPanel2.setBackground(new java.awt.Color(153, 255, 51));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -176,6 +180,7 @@ public class PRO extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
         jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 130, 30));
 
+        jTextField1.setEditable(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -184,7 +189,10 @@ public class PRO extends javax.swing.JFrame {
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 130, 30));
         jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 130, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 340, 390));
+        jLabel7.setText("id");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 340, 390));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -260,6 +268,13 @@ public class PRO extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void tblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblGuardarMouseClicked
+int fila = tblGuardar.getSelectedRow();
+        this.jTextField1.setText(tblGuardar.getValueAt(fila,0).toString());
+        this.jTextField2.setText(tblGuardar.getValueAt(fila,1).toString());
+        this.jTextField3.setText(tblGuardar.getValueAt(fila,2).toString());
+        this.jTextField4.setText(tblGuardar.getValueAt(fila,3).toString());
+        this.jTextField5.setText(tblGuardar.getValueAt(fila,4).toString());
+        this.jTextField6.setText(tblGuardar.getValueAt(fila,5).toString());
         // TODO add your handling code here:
     }//GEN-LAST:event_tblGuardarMouseClicked
 
@@ -309,6 +324,8 @@ public class PRO extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

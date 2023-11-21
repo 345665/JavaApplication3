@@ -3,46 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package javaapplication39;
-import java.sql.DriverManager;
+
 import java.sql.Connection;
-import java.sql.SQLException;
-import com.mysql.jdbc.Driver;
-import javax.swing.JOptionPane;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 /**
  *
  * @author 21PROGB439
  */
 public class JavaApplication39 {
-Connection cn; 
- public Connection conectar(){
- String host = "21progb439:mysql://190.1.0.131/";
- String user = "22progb";
- String pass = "alumno94";
- String bd = "22progb";
- try {
-   cn=DriverManager.getConnection (host+bd, user, pass);
-   JOptionPane.showMessageDialog (null, "conexion exitosa"); 
-   System.out.println( "conexion exitosa");
 
- }
- catch (SQLException ex) {
-
-JOptionPane.showMessageDialog(null,"ERROR"+ ex.getMessage());
-System.out.println(ex.getCause ()+"ERROR**");
- 
- 
- }
- 
- return cn;
- 
- }
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         // TODO code application logic here
+    }
+
+    Connection conectar() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
